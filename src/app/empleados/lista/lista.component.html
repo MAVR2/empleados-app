@@ -1,0 +1,28 @@
+<div class="container mt-2 p-4 border rounded shadow w-100" style="background-color: #f8f9fa;">
+    <table class="table table-striped  w-100 ">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Teléfono</th>
+                <th>Sexo</th>
+                <th>Fecha Nac.</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let empleado of empleados">
+                <td>{{ empleado.id }}</td>
+                <td>{{ empleado.nombre }}</td>
+                <td>{{ empleado.correo }}</td>
+                <td>{{ empleado.telefono }}</td>
+                <td>{{ empleado.sexo }}</td>
+                <td>{{ empleado.fecha_Nacimineto | date }}</td>
+                <td>
+                    <button class="btn btn-danger btn-sm" (click)="eliminar(empleado.id)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
